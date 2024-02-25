@@ -1,0 +1,60 @@
+{% load static %}
+  <!DOCTYPE html>
+  <html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!--<body style="background-color: #b6d0e2;">-->
+    <title>Scholar Study</title>
+    <link href="{% static "base.css" %}" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <div id="header">
+      <span class="logo">ScholarSync</span>
+      
+          
+        </div>
+        <br><br> 
+    <center>
+      <h1>Upload a Study Guide</h1>
+    </center>
+    
+    <div class="uploadf">
+  
+      <script src="script.js"></script>
+  
+      <form action="/action_page.php">
+        <label for="course" style="font-size: 19px;"><b>Course:</b></label>
+        <select name="subject" id="subject">
+          <option value="apbio">AP Biology</option>
+          <option value="apcsa">AP Computer Science A</option>
+        </select>
+        <br><br>
+  
+        <label for="unit" style="font-size: 19px;"><b>Unit:</b></label>
+        <select name="unit" id="unit">
+          <option value="unit1" onchange="userInputCourse = this.value">Unit 1</option>
+          <option value="unit2" onchange="userInputCourse = this.value">Unit 2</option>
+          <option value="unit3" onchange="userInputCourse = this.value">Unit 3</option>
+        </select>
+        <br><br>
+        
+        <div class='uploads'>
+          <label for="upload" style="font-size: 19px;"><b>Upload:</b></label>
+        <input type="file" id="myFile" name="filename">
+  
+        
+  
+  
+        
+        <br><br>
+        <input type="submit" value="Submit">
+        </div>
+  
+    </center> 
+    <script src="script.js"></script>
+  </body>
+  
+  </html>
